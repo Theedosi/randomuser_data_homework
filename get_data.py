@@ -15,3 +15,4 @@ def get_data(filename:str) -> dict:
 f = open('randomuser_data.json','r')
 x= f.read()
 data= get_data(x)
+
