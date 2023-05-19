@@ -13,3 +13,19 @@ def get_gender_users(data:dict) -> list:
     Returns:
         list: users get gender list
     """
+    f = 0
+    m = 0
+    x1 = []
+    x = data['results']
+    for i in x :
+        x1.append(i['gender'])
+        if i["gender"]== 'male':
+            m = m + 1
+        if i['gender']== 'female':
+            f = f + 1
+    dict = {
+        'male' : m,
+        'female': f
+    }
+    return dict
+print(get_gender_users(get_data.data))
